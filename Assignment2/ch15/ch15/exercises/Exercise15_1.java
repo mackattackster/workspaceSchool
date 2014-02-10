@@ -7,5 +7,12 @@ the new GeometricObject class. Write a test program that uses the max method to 
 circles and the larger of two rectangles
 */
 public class Exercise15_1 {
-
+	public static void main (String[] args) {
+		GeometricObject cir1 = new Circle(3);
+		GeometricObject cir2 = new Circle(4);
+		
+		
+		
+		
+	}
 }
