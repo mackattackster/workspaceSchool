@@ -1,0 +1,17 @@
+[33m9e1a6c5[m HEAD@{0}: commit: testing commit
+[33mc2c7b67[m HEAD@{1}: pull --progress --rebase --prune: checkout c2c7b6763b05688c8ea078dad9bec929daf0edae
+[33m017818c[m HEAD@{2}: commit: Changes to Assignment 2
+[33m3e26f2d[m HEAD@{3}: commit: Added Assignment 2
+[33m0f6f9e8[m HEAD@{4}: commit: some message goes here
+[33m623bc4a[m HEAD@{5}: commit: wads
+[33m49c02fd[m HEAD@{6}: commit: Starting clean again?
+[33m46f434d[m HEAD@{7}: commit: Starting Clean
+[33mbaee570[m HEAD@{8}: rebase finished: returning to refs/heads/1st-Branch
+[33mbaee570[m HEAD@{9}: pull --progress --rebase --prune: checkout baee5702e870b9c396e9424d43a582f432fef858
+[33mebf305c[m HEAD@{10}: commit: 1234
+[33m8fef563[m HEAD@{11}: commit: main
+[33m6e3d9b6[m HEAD@{12}: commit: Assignment1
+[33m31af37c[m HEAD@{13}: checkout: moving from master to 1st-Branch
+[33m31af37c[m HEAD@{14}: commit: Test
+[33m8d4e48c[m HEAD@{15}: commit: Added Assignment 1 to school workspace
+[33ma286cc5[m HEAD@{16}: commit (initial): First Commit
