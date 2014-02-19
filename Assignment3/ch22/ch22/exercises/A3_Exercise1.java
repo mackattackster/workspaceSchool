@@ -1,3 +1,4 @@
+//Chris Mack CS3401 Assignment 3 Exercise 1
 package ch22.exercises;
 
 import java.io.FileNotFoundException;
@@ -5,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-import javax.swing.*;
 
 //Write a Java program that reads words from a text file and displays all the words (including duplicates) 
 //in ascending alphabetical order. The word must start with a letter. Hint: make use of class Collections 
