@@ -9,7 +9,13 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Collections;
+
 import javax.swing.*;
+
+//Write a Java program that reads allows the user to enter numbers (from a graphical user interface) and 
+//displays all the entered numbers in a text area as shown below. Use a linked list to store the numbers 
+//(no duplicates). Add buttons Sort, Shuffle, and Reverse to sort, shuffle and reverse the list as shown 
+//below. 
 
 public class A3_Exercise2 extends JFrame {
 	private static final long serialVersionUID = -7117943118812403720L;
@@ -26,7 +32,8 @@ public class A3_Exercise2 extends JFrame {
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-	}//end of main	
+	}//end of main
+	
 	public A3_Exercise2() {
 		JPanel p1 = new JPanel(new FlowLayout());
 		JPanel p2 = new JPanel(new GridLayout(1,1,1,1));
@@ -55,23 +62,27 @@ public class A3_Exercise2 extends JFrame {
 		add(p2);
 		add(p3);
 	}//end of constructor
+	
 	class SortListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Collections.sort(ali);
 			display.setText(ali.toString());
 		}
 	}//end of sort listener
+	
 	class ShuffleListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Collections.shuffle(ali);
 			display.setText(ali.toString());
 		}	
 	}//end of shuffle listener
+	
 	class ReverseListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Collections.reverse(ali);
 			display.setText(ali.toString());
 		}
-	}//end of Reverse listener	
+	}//end of Reverse listener
+	
 }
 

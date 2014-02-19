@@ -82,4 +82,5 @@ public class A3_Exercise3 extends JFrame{
 			System.exit(0);
 		}	
 	}//end of shuffle listener
+	
 }

@@ -45,6 +45,7 @@ public class A3_Exercise3 extends JFrame{
 		frame.setVisible(true);
 		frame.setTitle("Capital Game");
 	}//end of main
+	
 	public A3_Exercise3() {
 		JPanel p1 = new JPanel(new FlowLayout());
 		JPanel p2 = new JPanel(new FlowLayout());
@@ -82,4 +83,5 @@ public class A3_Exercise3 extends JFrame{
 			System.exit(0);
 		}	
 	}//end of shuffle listener
+	
 }
