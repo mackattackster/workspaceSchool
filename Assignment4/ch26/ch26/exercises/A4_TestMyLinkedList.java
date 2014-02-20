@@ -15,20 +15,20 @@ public class A4_TestMyLinkedList {
 		 
 		 System.out.println("===== Testing new operations ====="); 
 		 System.out.println(myTestlist.contains("George")); 
-//		 System.out.println(myTestlist.get(3)); 
-//		 System.out.println(myTestlist.indexOf("George")); 
-//		 System.out.println(myTestlist.lastIndexOf("George")); 
-//		 myTestlist.set(4, "Michael"); 
-//		 System.out.println(myTestlist); 
-//		 System.out.println("=========== more testing ========="); 
-//		 myTestlist.add("Nancy"); 
-//		 myTestlist.add("Jose"); 
-//		 myTestlist.add("George"); 
-//		 myTestlist.add("Richard"); 
-//		 System.out.println(myTestlist.get(7)); 
-//		 System.out.println(myTestlist.indexOf("Mike")); 
-//		 System.out.println(myTestlist.lastIndexOf("George")); 
-//		 System.out.println(myTestlist);
+		 System.out.println(myTestlist.get(3)); 
+		 System.out.println(myTestlist.indexOf("George")); 
+		 System.out.println(myTestlist.lastIndexOf("George")); 
+		 myTestlist.set(4, "Michael"); 
+		 System.out.println(myTestlist); 
+		 System.out.println("=========== more testing ========="); 
+		 myTestlist.add("Nancy"); 
+		 myTestlist.add("Jose"); 
+		 myTestlist.add("George"); 
+		 myTestlist.add("Richard"); 
+		 System.out.println(myTestlist.get(7)); 
+		 System.out.println(myTestlist.indexOf("Mike")); 
+		 System.out.println(myTestlist.lastIndexOf("George")); 
+		 System.out.println(myTestlist);
 	}//end of main method
 
 }//end of assignment 4

@@ -1,7 +1,0 @@
-package ch22.exercises;
-
-import javax.swing.JApplet;
-
-public class A3_Exercise1 extends JApplet{
-
-}

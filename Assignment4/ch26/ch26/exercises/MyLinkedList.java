@@ -63,7 +63,7 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	  @Override /** Add a new element at the specified index 
 	   * in this list. The index of the head element is 0 */
 	  public void add(int index, E e) {
-	    //checkIndex(index);
+	    checkIndex(index);
 	    
 	    if (index == 0) {
 	      addFirst(e);
@@ -170,7 +170,6 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	        result.append("]"); // Insert the closing ] in the string
 	      }
 	    }
-
 	    return result.toString();
 	  }
 
@@ -192,28 +191,59 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 
 	  @Override /** Return the element at the specified index */
 	  public E get(int index) {
-	    System.out.println("Implementation left as an exercise");
-	    return null;
+		  checkIndex(index);
+		  Node<E> temp = head;
+		  for (int j = 0; j < index; j++) {
+			  temp = temp.next;
+		  }
+	    return temp.element;
 	  }
 
 	  @Override /** Return the index of the head matching element in 
 	   *  this list. Return -1 if no match. */
 	  public int indexOf(E e) {
-	    System.out.println("Implementation left as an exercise");
-	    return 0;
+	    int counter = 0;
+	    E temp = null;
+	    Iterator<E> i = iterator();
+	    for(int j = 0; j < size; j++) {
+	    	temp = i.next();
+	    	if (temp.equals(e))
+	    		return counter;
+	    	counter++;
+	    }
+	    return -1;
 	  }
 
 	  @Override /** Return the index of the last matching element in 
 	   *  this list. Return -1 if no match. */
 	  public int lastIndexOf(E e) {
-	    System.out.println("Implementation left as an exercise");
-	    return 0;
+	    int counter = size - 1;
+	    E temp = null;
+	    for (int j = size; j > 0; j--) {
+	    	temp = get(j - 1);
+	    	if (temp.equals(e))
+	    		return counter;
+	    	counter--;
+	    }
+	    return -1;
 	  }
 
 	  @Override /** Replace the element at the specified position 
 	   *  in this list with the specified element. */
 	  public E set(int index, E e) {
-	    System.out.println("Implementation left as an exercise");
+		  checkIndex(index);
+		  Node<E> temp = head;
+	    if (index == 0)
+	    	head.element = e;
+	    else if(index == size - 1)
+	    	tail.element = e;
+	    else {
+	    	for (int j = 0; j < index; j++) {
+	    		temp = temp.next;
+	    		if (j == index - 1)
+	    			 temp.element = e;
+	    	}
+	    }
 	    return null;
 	  }
 
@@ -223,7 +253,7 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
 	  }
 
 	  private void checkIndex(int index) {
-	    if (index < 0 || index >= size)
+	    if (index < 0 || index > size)
 	      throw new IndexOutOfBoundsException
 	        ("Index: " + index + ", Size: " + size);
 	  }
