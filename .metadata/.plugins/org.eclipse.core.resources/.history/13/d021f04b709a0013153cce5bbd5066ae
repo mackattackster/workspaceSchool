@@ -2,6 +2,7 @@
 
 package ch26.exercises;
 
+
 //Consider these source files posted on the Lectures Notes page (Chapter 26 - Part 1 Slides - 
 //Source Code): Classes MyList, MyAbstractList, and MyLinkedList. 
 //Completed the implementation of class MyLinkedList. That is, all class methods that return 
@@ -310,8 +311,7 @@ public class A4_TestMyLinkedList {
 		    }
 		  }
 		  
-		  @SuppressWarnings("hiding")
-		private class Node<E> {
+		  private class Node<E> {
 		    E element;
 		    Node<E> next;
 
