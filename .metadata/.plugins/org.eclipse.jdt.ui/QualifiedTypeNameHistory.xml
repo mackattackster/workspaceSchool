@@ -24,4 +24,5 @@
 <fullyQualifiedTypeName name="java.awt.GridLayout"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="ch26.exercises.A4_TestMyLinkedList.MyAbstractList"/>
 </qualifiedTypeNameHistroy>
