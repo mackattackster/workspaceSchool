@@ -12,6 +12,9 @@ public class A5_TestBST {
 		tree.insert("Jones");
 		tree.insert("Peter");
 		tree.insert("Daniel");
+		
+		//Find height of tree
+		System.out.println("The height of the tree is " + tree.height());
 
 		// Traverse tree
 		System.out.print("Inorder (sorted): ");
@@ -21,7 +24,11 @@ public class A5_TestBST {
 		System.out.print("\nPreorder: ");
 		tree.preorder();
 		System.out.print("\nThe number of nodes is " + tree.getSize());
-
+		//Print number of leaves
+		System.out.print("\n==> Leaves: " + tree.getNumberOfLeaves());
+		//Print number of Non-leaves
+		System.out.println("\n==> NonLeaves: " + tree.getNumberOfNonLeaves());
+		
 		// Search for an element
 		System.out.print("\nIs Peter in the tree? " + tree.search("Peter"));
 
