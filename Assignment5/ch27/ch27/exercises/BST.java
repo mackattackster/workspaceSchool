@@ -55,15 +55,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 	// Add code for method public int getNumberOfNonLeaves() here
 	// ====================================================================
 	public int getNumberOfNonLeaves() {
-		return getNumberOfNonLeaves(root);
-	}
-	public int getNumberOfNonLeaves(TreeNode<E> node) {
-		if (node == null)
-			return 0;
-		else if (node.left == null && node.right == null)
-			return -1;
-		else
-			return (getNumberOfNonLeaves(node.left) + 1 + getNumberOfNonLeaves(node.right) + 1);
+		return this.getSize() - getNumberOfLeaves();
 	}
 
 	@Override
