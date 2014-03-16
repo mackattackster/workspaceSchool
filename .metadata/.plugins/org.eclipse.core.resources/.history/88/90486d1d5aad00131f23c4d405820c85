@@ -3,8 +3,7 @@ package ch27.exercises;
 public class A5_TestBST {
 	public static void main(String[] args) {
 		// Create a BST and check height
-		A5_TestBST A5 = new A5_TestBST();
-		BST<String> tree = A5.new BST<String>();
+		BST<String> tree = new A5_TestBST.BST<String>();
 		tree.insert("George");
 		tree.insert("Michael");
 		tree.insert("Tom");
@@ -59,7 +58,7 @@ public class A5_TestBST {
 
 		// Try another way to create a tree
 		Integer[] numbers = { 2, 4, 3, 1, 8, 5, 6, 7 };
-		BST<Integer> intTree = A5.new BST<Integer>(numbers);
+		BST<Integer> intTree = new BST<Integer>(numbers);
 		System.out.print("\n\nInordertraversal of intTree: ");
 		intTree.inorder();
 	}

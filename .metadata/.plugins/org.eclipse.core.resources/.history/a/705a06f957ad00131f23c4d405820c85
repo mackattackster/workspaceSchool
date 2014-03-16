@@ -1,10 +1,12 @@
 package ch27.exercises;
 
+import ch27.exercises.BST.InorderIterator;
+import ch27.exercises.BST.TreeNode;
+
 public class A5_TestBST {
 	public static void main(String[] args) {
 		// Create a BST and check height
-		A5_TestBST A5 = new A5_TestBST();
-		BST<String> tree = A5.new BST<String>();
+		BST<String> tree = new BST<String>();
 		tree.insert("George");
 		tree.insert("Michael");
 		tree.insert("Tom");
@@ -53,16 +55,18 @@ public class A5_TestBST {
 
 		// Get a path from the root to Peter
 		System.out.print("\n\nA path from the root to Peter is: ");
-		java.util.ArrayList<BST<String>.TreeNode<String>> path = tree.path("Peter");
+		java.util.ArrayList<BST.TreeNode<String>> path = tree.path("Peter");
 		for (int i = 0; path != null && i < path.size(); i++)
 			System.out.print(path.get(i).element + " ");
 
 		// Try another way to create a tree
 		Integer[] numbers = { 2, 4, 3, 1, 8, 5, 6, 7 };
-		BST<Integer> intTree = A5.new BST<Integer>(numbers);
+		BST<Integer> intTree = new BST<Integer>(numbers);
 		System.out.print("\n\nInordertraversal of intTree: ");
 		intTree.inorder();
 	}
+
+	package ch27.exercises;
 
 	public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 		protected TreeNode<E> root;
@@ -224,7 +228,7 @@ public class A5_TestBST {
 		 * This inner class is static, because it does not access any instance
 		 * members defined in its outer class
 		 */
-		class TreeNode<E extends Comparable<E>> {
+		static class TreeNode<E extends Comparable<E>> {
 			protected E element;
 			protected TreeNode<E> left;
 			protected TreeNode<E> right;
@@ -384,67 +388,4 @@ public class A5_TestBST {
 		}
 	}
 
-	public interface Tree<E> extends Iterable<E> {
-		/** Return true if the element is in the tree */
-		public boolean search(E e);
-
-		/**
-		 * Insert element o into the binary tree Return true if the element is
-		 * inserted successfully
-		 */
-		public boolean insert(E e);
-
-		/**
-		 * Delete the specified element from the tree Return true if the element is
-		 * deleted successfully
-		 */
-		public boolean delete(E e);
-
-		/** Inorder traversal from the root */
-		public void inorder();
-
-		/** Postorder traversal from the root */
-		public void postorder();
-
-		/** Preorder traversal from the root */
-		public void preorder();
-
-		/** Get the number of nodes in the tree */
-		public int getSize();
-
-		/** Return true if the tree is empty */
-		public boolean isEmpty();
-		//
-		// BLOCKCOMMENT* Return an iterator to traverse elements in the tree */
-		// public java.util.Iterator<E> iterator();
-	}
-
-	public abstract class AbstractTree<E> implements Tree<E> {
-		@Override
-		/** Inorder traversal from the root*/
-		public void inorder() {
-		}
-
-		@Override
-		/** Postorder traversal from the root */
-		public void postorder() {
-		}
-
-		@Override
-		/** Preorder traversal from the root */
-		public void preorder() {
-		}
-
-		@Override
-		/** Return true if the tree is empty */
-		public boolean isEmpty() {
-			return getSize() == 0;
-		}
-		//
-		// @Override BLOCKCOMMENT* Return an iterator for the tree */
-		// public java.util.Iterator<E> iterator() {
-		// return null;
-		// }
-	}
-	
 }

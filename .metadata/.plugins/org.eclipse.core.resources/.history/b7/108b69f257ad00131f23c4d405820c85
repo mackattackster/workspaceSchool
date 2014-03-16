@@ -1,0 +1,65 @@
+package ch27.exercises;
+
+public class A5_TestBST {
+	public static void main(String[] args) {
+		// Create a BST and check height
+		BST<String> tree = new BST<String>();
+		tree.insert("George");
+		tree.insert("Michael");
+		tree.insert("Tom");
+		tree.insert("Adam");
+		tree.insert("Adam");
+		tree.insert("Adam");
+		System.out.println("The height of tree is " + tree.height());
+
+		// check number of leaf and non-leaf nodes so far
+		System.out.print("\nNumber of nodes so far: " + tree.getSize());
+		System.out.println();
+		System.out.println("==> Leaves: " + tree.getNumberOfLeaves());
+		System.out.println("--> Non-Leaves: " + tree.getNumberOfNonLeaves());
+		System.out.println();
+
+		// add few more nodes
+		System.out.println("The height of tree is " + tree.height());
+		tree.insert("Jones");
+		System.out.println("The height of tree is " + tree.height());
+		tree.insert("Peter");
+		System.out.println("The height of tree is " + tree.height());
+		tree.insert("Daniel");
+		System.out.println("The height of tree is " + tree.height());
+		tree.insert("Red");
+		System.out.println("The height of tree is " + tree.height());
+		tree.insert("Green");
+		System.out.println("The height of tree is " + tree.height());
+
+		// Let's check number of leaf and non-leaf nodes again
+		System.out.print("\nNumber of nodes so far: " + tree.getSize());
+		System.out.println();
+		System.out.println("==> Leaves: " + tree.getNumberOfLeaves());
+		System.out.println("--> Non-Leaves: " + tree.getNumberOfNonLeaves());
+		System.out.println();
+
+		// Now let's traverse the tree
+		System.out.print("Inorder(sorted): ");
+		tree.inorder();
+		System.out.print("\nPostorder : ");
+		tree.postorder();
+		System.out.print("\nPreorder : ");
+		tree.preorder();
+
+		// Search for an element
+		System.out.print("\n\nIs Peter in the tree? " + tree.search("Peter"));
+
+		// Get a path from the root to Peter
+		System.out.print("\n\nA path from the root to Peter is: ");
+		java.util.ArrayList<BST.TreeNode<String>> path = tree.path("Peter");
+		for (int i = 0; path != null && i < path.size(); i++)
+			System.out.print(path.get(i).element + " ");
+
+		// Try another way to create a tree
+		Integer[] numbers = { 2, 4, 3, 1, 8, 5, 6, 7 };
+		BST<Integer> intTree = new BST<Integer>(numbers);
+		System.out.print("\n\nInordertraversal of intTree: ");
+		intTree.inorder();
+	}
+}
