@@ -1,3 +1,5 @@
+package ch29.exercises;
+
 public class AVLTree<E extends Comparable<E>> extends BST<E> {
   /** Create a default AVL tree */
   public AVLTree() {
