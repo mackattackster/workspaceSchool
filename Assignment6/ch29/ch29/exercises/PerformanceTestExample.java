@@ -1,3 +1,5 @@
+package ch29.exercises;
+
 
 // This program illustrates performance testing for membership and remove oprtations.
 
