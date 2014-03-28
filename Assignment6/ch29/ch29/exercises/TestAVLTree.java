@@ -1,3 +1,5 @@
+package ch29.exercises;
+
 public class TestAVLTree {
   public static void main(String[] args) {
     // Create an AVL tree
